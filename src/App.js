@@ -8,6 +8,7 @@ import SignUpAndSignInPage from './pages/signup-signin/signup-signin';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user.action';
+import Checkout from './pages/checkout/checkout';
 
 
 class App extends Component {
@@ -43,6 +44,7 @@ class App extends Component {
       <Switch>
           <Route exact path="/" component={Homepage}></Route>
           <Route  path="/shop" component={ShopPage}></Route>
+          <Route  path="/checkout" component={Checkout}></Route>
           <Route exact path="/signin" render=
           {
             () => this.props.currentUser ?
